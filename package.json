@@ -10,7 +10,6 @@
     "aws-sdk": "^2.501.0",
     "serverless-offline": "^5.8.0",
     "serverless-offline-sqs": "^2.0.3",
-    "serverless-offline-sqs-esmq": "^1.0.0",
     "source-map-support": "^0.5.10"
   },
   "devDependencies": {

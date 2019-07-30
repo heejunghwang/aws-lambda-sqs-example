@@ -7,7 +7,6 @@ plugins:
   - serverless-offline
   - serverless-offline-sqs
 
-
 provider:
   name: aws
   runtime: nodejs10.x
@@ -24,6 +23,12 @@ functions:
   receiveMessage:
     handler: handler.receiveMessage
     events:
-      - sqs:
-          arn: "ARN:URL" # TODO : CHANGE HERE
-          batchSize: 1
+      - sqs: arn:aws:sqs:region:XXXXXX:MyFirstQueue  # TODO : CHANGE HERE
+
+custom:
+  serverless-offline-sqs:
+    apiVersion: '2012-11-05'
+    endpoint: http://0.0.0.0:9324
+    region: eu-west-1
+    accessKeyId: root
+    secretAccessKey: root
